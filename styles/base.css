@@ -36,7 +36,7 @@ h2 {
 	line-height: 1.1;
 }
 
-header h1 {
+.site-title {
 	font-size: clamp(1.6rem, 4vw, 2.8rem);
 	letter-spacing: 0.02em;
 	margin: 0 0 1.75rem;
@@ -151,6 +151,19 @@ main > h1::after {
 	width: 100%;
 }
 
+.card a,
+footer a {
+	color: var(--navy);
+	font-weight: 700;
+}
+
+.card a:hover,
+.card a:focus-visible,
+footer a:hover,
+footer a:focus-visible {
+	color: var(--coral);
+}
+
 footer {
 	background: var(--navy);
 	color: var(--white);
@@ -160,6 +173,10 @@ footer {
 
 footer p {
 	margin: 0.25rem;
+}
+
+footer a {
+	color: var(--white);
 }
 
 #lastModified {
