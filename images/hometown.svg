@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" role="img" aria-labelledby="title desc">
+  <title id="title">Hometown landscape illustration</title>
+  <desc id="desc">A bright landscape with hills, a sun, and a small house.</desc>
+  <rect width="320" height="180" fill="#f7e7b6"/>
+  <circle cx="245" cy="48" r="27" fill="#e58f65"/>
+  <path d="M0 130 90 70l68 45 52-42 110 57v50H0z" fill="#4f8a70"/>
+  <path d="M0 150 100 98l70 40 55-30 95 42v30H0z" fill="#246b62"/>
+  <path d="M110 145v-35l30-25 30 25v35z" fill="#f5f7f8"/>
+  <path d="m103 112 37-34 37 34z" fill="#c95d45"/>
+  <rect x="132" y="123" width="16" height="22" fill="#4f6d7a"/>
+</svg>

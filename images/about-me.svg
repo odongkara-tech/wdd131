@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" role="img" aria-labelledby="title desc">
+  <title id="title">Web development illustration</title>
+  <desc id="desc">A laptop displaying HTML and CSS code.</desc>
+  <rect width="320" height="180" fill="#d9eef2"/>
+  <rect x="55" y="35" width="210" height="120" rx="8" fill="#17324d"/>
+  <rect x="70" y="50" width="180" height="82" fill="#f5f7f8"/>
+  <path d="M90 72h60M90 88h100M90 104h78" stroke="#177e89" stroke-width="8" stroke-linecap="round"/>
+  <path d="M35 155h250l-20 12H55z" fill="#4f6d7a"/>
+</svg>
