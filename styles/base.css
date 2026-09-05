@@ -56,15 +56,34 @@ nav {
 nav a {
 	color: var(--white);
 	font-weight: 700;
+	position: relative;
 	padding: 0.35rem 0.1rem;
 	text-decoration: none;
 	transition: color 160ms ease, transform 160ms ease;
+}
+
+nav a::after {
+	background: var(--coral);
+	bottom: 0;
+	content: "";
+	height: 3px;
+	left: 0;
+	position: absolute;
+	transform: scaleX(0);
+	transform-origin: center;
+	transition: transform 160ms ease;
+	width: 100%;
 }
 
 nav a:hover,
 nav a:focus-visible {
 	color: #ffd166;
 	transform: translateY(-2px);
+}
+
+nav a:hover::after,
+nav a:focus-visible::after {
+	transform: scaleX(1);
 }
 
 main {
