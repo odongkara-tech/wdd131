@@ -1,0 +1,36 @@
+@media (min-width: 500px) {
+	body {
+		background: #e5f1f2;
+	}
+
+	header {
+		background: #000000;
+		color: #ffffff;
+	}
+
+	header {
+		padding: 2.5rem;
+	}
+
+	h1 {
+		font-size: 3rem;
+	}
+
+	main {
+		display: grid;
+		gap: 2rem;
+		grid-template-columns: 1fr 1fr;
+		padding: 4rem 2rem;
+	}
+
+	section {
+		border-left: 0;
+		border-top: 0.5rem solid #d36b4d;
+		margin-bottom: 0;
+		padding: 2rem;
+	}
+
+	h2 {
+		font-size: 1.5rem;
+	}
+}
