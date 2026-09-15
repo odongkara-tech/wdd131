@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Temple Album</title>
+	<meta name="description" content="A responsive album of temples from around the world.">
+	<meta name="author" content="Odongkara Ronald">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles/temples.css">
+	<link rel="stylesheet" href="styles/temples-large.css">
+	<script src="scripts/temples.js" defer></script>
+	<script src="scripts/getdates.js" defer></script>
+</head>
+<body>
+	<header>
+		<h1>Temple Album</h1>
+		<button id="menu" type="button" aria-label="Open navigation menu">☰</button>
+		<nav aria-label="Main navigation">
+			<a href="#home">Home</a>
+			<a href="#old">Old</a>
+			<a href="#new">New</a>
+			<a href="#large">Large</a>
+			<a href="#small">Small</a>
+		</nav>
+	</header>
+	<main>
+		<h1>Temple Album</h1>
+		<section id="temple-album" aria-label="Temple album">
+			<figure>
+				<img src="images/temples/optimized3/salt-lake-temple.jpg" alt="Salt Lake Temple in Utah, USA" width="800" height="600" loading="lazy">
+				<figcaption>Salt Lake Temple, USA</figcaption>
+			</figure>
+			<figure>
+				<img src="images/temples/optimized3/washington-dc-temple.jpg" alt="Washington D.C. Temple in the United States" width="800" height="600" loading="lazy">
+				<figcaption>Washington D.C. Temple, USA</figcaption>
+			</figure>
+			<figure>
+				<img src="images/temples/optimized3/los-angeles-temple.jpg" alt="Los Angeles California Temple in the United States" width="800" height="600" loading="lazy">
+				<figcaption>Los Angeles Temple, USA</figcaption>
+			</figure>
+			<figure>
+				<img src="images/temples/optimized3/johannesburg-temple.jpg" alt="Johannesburg Temple in South Africa" width="800" height="600" loading="lazy">
+				<figcaption>Johannesburg Temple, South Africa</figcaption>
+			</figure>
+			<figure>
+				<img src="images/temples/optimized3/accra-temple.jpg" alt="Accra Temple in Ghana" width="800" height="600" loading="lazy">
+				<figcaption>Accra Temple, Ghana</figcaption>
+			</figure>
+			<figure>
+				<img src="images/temples/optimized3/manila-temple.jpg" alt="Manila Temple in the Philippines" width="800" height="600" loading="lazy">
+				<figcaption>Manila Temple, Philippines</figcaption>
+			</figure>
+			<figure>
+				<img src="images/temples/optimized3/tokyo-temple.jpg" alt="Tokyo Temple in Japan" width="800" height="600" loading="lazy">
+				<figcaption>Tokyo Temple, Japan</figcaption>
+			</figure>
+			<figure>
+				<img src="images/temples/optimized3/rome-temple.jpg" alt="Rome Temple in Italy" width="800" height="600" loading="lazy">
+				<figcaption>Rome Temple, Italy</figcaption>
+			</figure>
+			<figure>
+				<img src="images/temples/optimized3/london-temple.jpg" alt="London Temple in England" width="800" height="600" loading="lazy">
+				<figcaption>London Temple, England</figcaption>
+			</figure>
+		</section>
+	</main>
+	<footer>
+		<p>&copy; <span id="currentyear"></span> Odongkara Ronald | Uganda | <a href="https://www.byupathway.edu/">BYU-Pathway</a></p>
+		<p id="lastModified"></p>
+	</footer>
+</body>
+</html>
