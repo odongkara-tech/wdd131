@@ -1,0 +1,148 @@
+:root {
+	--black: #000000;
+	--gold: #fcdc04;
+	--red: #d90000;
+	--ink: #202820;
+	--paper: #fff;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	color: var(--ink);
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.site-header {
+	padding: 1rem;
+	color: var(--paper);
+	text-align: center;
+	background: var(--black);
+	border-bottom: 0.5rem solid var(--gold);
+}
+
+.site-header h1 {
+	margin: 0;
+	font-size: clamp(1.8rem, 5vw, 2.5rem);
+}
+
+.hero {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1rem;
+	padding: 1rem;
+}
+
+.hero-image {
+	display: block;
+	grid-column: 1 / -1;
+}
+
+.hero-image img {
+	display: block;
+	width: 100%;
+	height: auto;
+	aspect-ratio: 2 / 1;
+	object-fit: cover;
+}
+
+.info-panel {
+	padding: 1rem 1.25rem;
+	background: #f5f5ef;
+	border-top: 0.25rem solid var(--red);
+	box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
+}
+
+.info-panel h2 {
+	margin: 0 0 0.75rem;
+	color: var(--black);
+	font-size: 1.35rem;
+}
+
+.info-panel dl {
+	display: grid;
+	gap: 0.55rem;
+	margin: 0;
+}
+
+.info-panel dl div {
+	display: grid;
+	grid-template-columns: minmax(7rem, 1fr) 1.2fr;
+	gap: 0.5rem;
+}
+
+.info-panel dt {
+	font-weight: 700;
+	text-align: right;
+}
+
+.info-panel dd {
+	margin: 0;
+}
+
+.weather-content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+}
+
+.weather-icon {
+	width: 3.5rem;
+	height: 3.5rem;
+	flex: 0 0 auto;
+}
+
+.site-footer {
+	padding: 0.75rem 1rem;
+	color: var(--paper);
+	text-align: center;
+	background: var(--black);
+	border-top: 0.25rem solid var(--gold);
+}
+
+.site-footer p {
+	margin: 0.25rem;
+}
+
+@media (min-width: 700px) {
+	.hero {
+		position: relative;
+		display: block;
+		min-height: 34rem;
+		padding: 1rem;
+	}
+
+	.hero-image img {
+		width: 100%;
+		max-height: 42rem;
+		object-fit: cover;
+	}
+
+	.info-panel {
+		position: absolute;
+		width: min(20rem, 30vw);
+		background: rgb(255 255 255 / 92%);
+	}
+
+	.info-panel:first-of-type {
+		top: 3rem;
+		left: 3rem;
+	}
+
+	.weather-panel {
+		right: 3rem;
+		bottom: 3rem;
+	}
+
+	.weather-panel h2::after {
+		content: "  \26C5";
+	}
+
+	.weather-icon {
+		display: none;
+	}
+}

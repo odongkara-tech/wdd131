@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="A responsive page about a place of interest.">
+	<title>Place</title>
+	<link rel="stylesheet" href="styles/place.css">
+</head>
+<body>
+	<header class="site-header">
+		<h1>Ghana</h1>
+	</header>
+	<main>
+		<section class="hero" aria-label="Accra, Ghana">
+			<picture class="hero-image">
+				<source srcset="week03/images/hero-large.webp" media="(min-width: 1000px)">
+				<source srcset="week03/images/hero-medium.webp" media="(min-width: 500px)">
+				<img src="week03/images/hero-small.webp" alt="Accra Ghana Temple beneath a cloudy sky, with palm trees in the foreground." width="1500" height="750">
+			</picture>
+			<section class="info-panel" aria-labelledby="data-heading">
+				<h2 id="data-heading">Data</h2>
+				<dl>
+					<div><dt>Capital</dt><dd>Accra</dd></div>
+					<div><dt>Language</dt><dd>English</dd></div>
+					<div><dt>Currency</dt><dd>Ghanaian cedi (GHS)</dd></div>
+					<div><dt>Time zone</dt><dd>Greenwich Mean Time (GMT)</dd></div>
+					<div><dt>Calling code</dt><dd>+233</dd></div>
+				</dl>
+			</section>
+			<section class="info-panel weather-panel" aria-labelledby="weather-heading">
+				<h2 id="weather-heading">Weather</h2>
+				<div class="weather-content">
+					<svg class="weather-icon" role="img" aria-labelledby="weather-icon-title" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+						<title id="weather-icon-title">Partly cloudy</title>
+						<circle cx="43" cy="20" r="10" fill="#fcdc04" />
+						<path d="M17 49h32a11 11 0 0 0 0-22 17 17 0 0 0-32-4 13 13 0 0 0 0 26Z" fill="#fff" stroke="#000000" stroke-width="3" stroke-linejoin="round" />
+					</svg>
+					<dl>
+						<div><dt>Conditions</dt><dd>Partly cloudy</dd></div>
+						<div><dt>Temperature</dt><dd id="temperature">28 °C</dd></div>
+						<div><dt>Wind</dt><dd id="wind-speed">12 km/h</dd></div>
+						<div><dt>Wind chill</dt><dd id="wind-chill">N/A</dd></div>
+					</dl>
+				</div>
+			</section>
+		</section>
+	</main>
+	<footer class="site-footer">
+		<p>© <span id="current-year"></span> uganda</p>
+		<p>Last modified: <time id="last-modified"></time></p>
+	</footer>
+<script src="scripts/place.js" defer></script>
+</body>
+</html>
