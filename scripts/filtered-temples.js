@@ -2,7 +2,9 @@ const menuButton = document.querySelector("#menu");
 const navigation = document.querySelector("nav");
 
 menuButton.addEventListener("click", () => {
-	navigation.classList.toggle("open");
+	const isOpen = navigation.classList.toggle("open");
+	menuButton.setAttribute("aria-expanded", String(isOpen));
+	menuButton.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
 });
 
 const temples = [
@@ -125,6 +127,8 @@ navigation.addEventListener("click", (event) => {
 	event.preventDefault();
 	renderTemples(filterTemples(link.hash.slice(1)));
 	navigation.classList.remove("open");
+	menuButton.setAttribute("aria-expanded", "false");
+	menuButton.setAttribute("aria-label", "Open navigation menu");
 });
 
 renderTemples(temples);
