@@ -1,0 +1,165 @@
+{
+    box-sizing: border-box;
+}
+
+:root {
+    --ink: #1d2935;
+    --navy: #183b56;
+    --blue: #2f6690;
+    --sky: #dcecf2;
+    --paper: #ffffff;
+    --line: rgba(29, 41, 53, 0.18);
+}
+
+body {
+    background: var(--sky);
+    color: var(--ink);
+    font-family: "DM Sans", sans-serif;
+    line-height: 1.5;
+    margin: 0;
+}
+
+header,
+main,
+footer {
+    margin: 0 auto;
+    max-width: 72rem;
+    padding: 1rem;
+}
+
+header {
+    background: var(--navy);
+    color: #ffffff;
+    position: relative;
+}
+
+h1,
+h2,
+.site-title {
+    font-family: "Space Grotesk", sans-serif;
+    margin: 0;
+}
+
+h1 {
+    font-size: clamp(1.6rem, 6vw, 2.5rem);
+    letter-spacing: 0.02em;
+}
+
+.site-title {
+    font-size: clamp(1.6rem, 6vw, 2.5rem);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+#menu {
+    background: transparent;
+    border: 0;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 1.75rem;
+    line-height: 1;
+    position: absolute;
+    right: 1rem;
+    top: 0.75rem;
+}
+
+nav {
+    display: none;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+nav.open {
+    display: flex;
+    flex-direction: column;
+}
+
+nav a {
+    color: #ffffff;
+    font-weight: 700;
+    padding: 0.5rem 0;
+    text-decoration: none;
+    transition: background-color 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    background: var(--blue);
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+main {
+    padding-bottom: 3rem;
+}
+
+main h1 {
+    color: var(--navy);
+    margin-bottom: 1rem;
+}
+
+#temple-album {
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: 1fr;
+}
+
+figure {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    box-shadow: 0 0.4rem 1rem rgba(24, 59, 86, 0.12);
+    margin: 0;
+    overflow: hidden;
+}
+
+figure img {
+    display: block;
+    height: 15rem;
+    object-fit: cover;
+    width: 100%;
+}
+
+.temple-card {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    box-shadow: 0 0.4rem 1rem rgba(24, 59, 86, 0.12);
+    overflow: hidden;
+}
+
+.temple-card img {
+    display: block;
+    height: 15rem;
+    object-fit: cover;
+    width: 100%;
+}
+
+.temple-card__details {
+    padding: 0.85rem 1rem;
+}
+
+.temple-card__details h2 {
+    color: var(--navy);
+    text-align: center;
+}
+
+.temple-card__details p {
+    margin: 0.5rem 0 0;
+}
+
+figcaption {
+    color: var(--navy);
+    font-size: 1.05rem;
+    font-weight: 700;
+    padding: 0.85rem 1rem;
+    text-align: center;
+}
+
+footer {
+    background: var(--navy);
+    color: #ffffff;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
