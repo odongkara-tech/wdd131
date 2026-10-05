@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Product review submission confirmation and review count.">
+	<meta name="author" content="Odongkara Ronald">
+	<title>Review Submitted | WDD 131</title>
+	<link rel="stylesheet" href="styles/forms.css">
+	<script src="scripts/products.js" defer></script>
+	<script src="scripts/review.js" defer></script>
+	<script src="scripts/getdates.js" defer></script>
+</head>
+<body>
+	<header class="page-header">
+		<p class="course-label">WDD 131 · Week 5</p>
+		<h1>Product Review</h1>
+		<p>Thank you for sharing your experience.</p>
+	</header>
+	<main>
+		<section class="confirmation" aria-live="polite">
+			<div class="confirmation-mark" aria-hidden="true">✓</div>
+			<h2 id="confirmationTitle">Review received</h2>
+			<p id="confirmationMessage">Your review has been recorded.</p>
+			<dl id="reviewDetails" class="review-details"></dl>
+			<p class="review-count">Reviews submitted: <strong id="reviewCount">0</strong></p>
+			<a class="return-link" href="form.html">Write another review</a>
+		</section>
+	</main>
+	<footer>
+		<p>&copy; <span id="currentyear"></span> Odongkara Ronald | Uganda | <a href="https://www.byupathway.edu/">BYU-Pathway</a></p>
+		<p id="lastModified"></p>
+	</footer>
+</body>
+</html>

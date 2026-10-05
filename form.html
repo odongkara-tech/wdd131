@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Share your feedback by submitting a product review.">
+	<meta name="author" content="Odongkara Ronald">
+	<title>Product Review Form | WDD 131</title>
+	<link rel="stylesheet" href="styles/forms.css">
+	<script src="scripts/products.js" defer></script>
+	<script src="scripts/form.js" defer></script>
+	<script src="scripts/getdates.js" defer></script>
+</head>
+<body>
+	<header class="page-header">
+		<p class="course-label">WDD 131 · Week 5</p>
+		<h1>Product Review</h1>
+		<p>Your experience helps others choose the right product.</p>
+	</header>
+	<main>
+		<form method="get" action="review.html">
+			<label for="product">Product Name <span class="required-note">(required)</span></label>
+			<select id="product" name="product" required>
+				<option value="" disabled selected>Select a Product ...</option>
+			</select>
+
+			<fieldset class="rating-field">
+				<legend>Overall Rating <span class="required-note">(required)</span></legend>
+				<div class="rating-options">
+					<div class="rating-option">
+						<input type="radio" id="rating1" name="rating" value="1" required>
+						<label for="rating1"><span aria-hidden="true">☆</span><span class="rating-label">1 star</span></label>
+					</div>
+					<div class="rating-option">
+						<input type="radio" id="rating2" name="rating" value="2" required>
+						<label for="rating2"><span aria-hidden="true">☆☆</span><span class="rating-label">2 stars</span></label>
+					</div>
+					<div class="rating-option">
+						<input type="radio" id="rating3" name="rating" value="3" required>
+						<label for="rating3"><span aria-hidden="true">☆☆☆</span><span class="rating-label">3 stars</span></label>
+					</div>
+					<div class="rating-option">
+						<input type="radio" id="rating4" name="rating" value="4" required>
+						<label for="rating4"><span aria-hidden="true">☆☆☆☆</span><span class="rating-label">4 stars</span></label>
+					</div>
+					<div class="rating-option">
+						<input type="radio" id="rating5" name="rating" value="5" required>
+						<label for="rating5"><span aria-hidden="true">☆☆☆☆☆</span><span class="rating-label">5 stars</span></label>
+					</div>
+				</div>
+			</fieldset>
+
+			<label for="installDate">Date of Installation <span class="required-note">(required)</span></label>
+			<input type="date" id="installDate" name="installDate" required>
+
+			<fieldset>
+				<legend>Useful Features <span class="optional-note">(check all that apply)</span></legend>
+				<div class="checkbox-list">
+					<div class="choice">
+						<input type="checkbox" id="durability" name="features" value="Durability">
+						<label for="durability">Durability</label>
+					</div>
+					<div class="choice">
+						<input type="checkbox" id="easeOfUse" name="features" value="Ease of use">
+						<label for="easeOfUse">Ease of use</label>
+					</div>
+					<div class="choice">
+						<input type="checkbox" id="performance" name="features" value="Performance">
+						<label for="performance">Performance</label>
+					</div>
+					<div class="choice">
+						<input type="checkbox" id="design" name="features" value="Design">
+						<label for="design">Design</label>
+					</div>
+				</div>
+			</fieldset>
+
+			<label for="writtenReview">Written Review <span class="optional-note">(optional)</span></label>
+			<textarea id="writtenReview" name="writtenReview" rows="5"></textarea>
+
+			<label for="userName">Your Name <span class="optional-note">(optional)</span></label>
+			<input type="text" id="userName" name="userName" autocomplete="name">
+
+			<input class="submit-button" type="submit" value="Submit Review">
+		</form>
+	</main>
+	<footer>
+		<p>&copy; <span id="currentyear"></span> Odongkara Ronald | Uganda | <a href="https://www.byupathway.edu/">BYU-Pathway</a></p>
+		<p id="lastModified"></p>
+	</footer>
+</body>
+</html>
