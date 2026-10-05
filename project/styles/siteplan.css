@@ -97,6 +97,31 @@ li + li {
   height: 90px;
 }
 
+.color-forest { background: #2d5d50; }
+.color-gold { background: #d6b37a; }
+.color-sand { background: #f5f1ea; }
+.color-earth { background: #6b4f3b; }
+
+.logo {
+  width: 100%;
+  max-width: 220px;
+  display: block;
+  margin: 0 auto;
+  background: #f5f1ea;
+  border-radius: 12px;
+  border: 1px solid rgba(31, 41, 51, 0.12);
+}
+
+.mobile-wireframe {
+  grid-template-areas:
+    "header"
+    "nav"
+    "hero"
+    "content"
+    "sidebar"
+    "footer";
+}
+
 .swatch label {
   display: block;
   padding: 0.7rem 0.75rem;
