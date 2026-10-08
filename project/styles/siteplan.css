@@ -81,7 +81,7 @@ li + li {
   margin-top: 0.4rem;
 }
 
-.pallete {
+.palette {
   display: grid;
   grid-template-columns: repeat(4, minmax(120px, 1fr));
   gap: 1rem;
@@ -97,10 +97,10 @@ li + li {
   height: 90px;
 }
 
-.color-forest { background: #2d5d50; }
-.color-gold { background: #d6b37a; }
-.color-sand { background: #f5f1ea; }
-.color-earth { background: #6b4f3b; }
+.color-forest { background: #173c35; }
+.color-gold { background: #c6a66c; }
+.color-sand { background: #f7f5ef; }
+.color-earth { background: #647d69; }
 
 .logo {
   width: 100%;
@@ -190,7 +190,7 @@ footer {
 
 @media (max-width: 700px) {
   .two-column,
-  .pallete {
+  .palette {
     grid-template-columns: 1fr;
   }
 

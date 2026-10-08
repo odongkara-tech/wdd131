@@ -152,19 +152,19 @@
         <div class="palette">
           <div class="swatch">
             <div class="color-block color-forest"></div>
-            <label>Forest Green<br>#2D5D50</label>
+            <label>Forest Green<br>#173C35</label>
           </div>
           <div class="swatch">
             <div class="color-block color-gold"></div>
-            <label>Warm Gold<br>#D6B37A</label>
+            <label>Warm Gold<br>#C6A66C</label>
           </div>
           <div class="swatch">
             <div class="color-block color-sand"></div>
-            <label>Soft Sand<br>#F5F1EA</label>
+            <label>Soft Sand<br>#F7F5EF</label>
           </div>
           <div class="swatch">
             <div class="color-block color-earth"></div>
-            <label>Earth Brown<br>#6B4F3B</label>
+            <label>Muted Moss<br>#647D69</label>
           </div>
         </div>
         <p>
@@ -173,18 +173,18 @@
           and natural brown tones to reflect sacred spaces, travel, and thoughtful planning.
         </p>
         <ul>
-          <li><strong>Forest Green (#2D5D50):</strong> used for the main header, primary sections, and key headings to establish trust, stability, and a grounded spiritual identity.</li>
-          <li><strong>Warm Gold (#D6B37A):</strong> used as an accent color for highlights, decorative lines, and visual emphasis to represent warmth, light, and inspiration.</li>
-          <li><strong>Soft Sand (#F5F1EA):</strong> used for page backgrounds and surrounding neutral space to create a calm and airy backdrop.</li>
-          <li><strong>Earth Brown (#6B4F3B):</strong> used for supportive contrast, secondary emphasis, and subtle grounding details that connect the design to nature and travel.</li>
+          <li><strong>Forest Green (#173C35):</strong> used for primary buttons and key details to establish a calm, grounded identity.</li>
+          <li><strong>Warm Gold (#C6A66C):</strong> used as an accent for highlights and decorative details.</li>
+          <li><strong>Soft Sand (#F7F5EF):</strong> used for page backgrounds and neutral space.</li>
+          <li><strong>Muted Moss (#647D69):</strong> used for secondary labels and supporting emphasis.</li>
         </ul>
       </section>
 
       <section>
         <h2>9. Typography</h2>
         <p>
-          <strong>Heading Font:</strong> Georgia, Times New Roman, serif<br>
-          <strong>Body Font:</strong> Arial, Helvetica, sans-serif
+          <strong>Heading Font:</strong> Playfair Display, Georgia, Times New Roman, serif<br>
+          <strong>Body Font:</strong> DM Sans, Arial, Helvetica, sans-serif
         </p>
         <p>
           This combination creates a timeless, respectful, and highly readable visual identity. The
@@ -192,8 +192,8 @@
           supports modern clarity and usability across desktop and mobile screens.
         </p>
         <ul>
-          <li><strong>Georgia, Times New Roman, serif:</strong> used for main headings, section titles, and prominent text where a refined, formal tone is desired.</li>
-          <li><strong>Arial, Helvetica, sans-serif:</strong> used for paragraphs, lists, navigation text, and general content to ensure legibility and accessibility.</li>
+          <li><strong>Playfair Display, Georgia, Times New Roman, serif:</strong> used for main headings, section titles, and prominent text where a refined, formal tone is desired.</li>
+          <li><strong>DM Sans, Arial, Helvetica, sans-serif:</strong> used for paragraphs, lists, navigation text, and general content to ensure legibility and accessibility.</li>
         </ul>
       </section>
 
@@ -206,19 +206,11 @@
           </article>
           <article class="page-card">
             <h3>Explore</h3>
-            <p>Browse temple destinations with descriptions, features, and helpful travel information.</p>
+            <p>Browse verified temple destinations with official profile links, photographs, and helpful travel information.</p>
           </article>
           <article class="page-card">
             <h3>Plan a Visit</h3>
-            <p>Offer practical trip guidance, visitor questions, and seasonal planning tips.</p>
-          </article>
-          <article class="page-card">
-            <h3>Gallery</h3>
-            <p>Display temple photography and destination highlights with optimized images.</p>
-          </article>
-          <article class="page-card">
-            <h3>Contact</h3>
-            <p>Include a simple contact form so users can ask questions or request information.</p>
+            <p>Create a private, browser-saved visit reminder using a form with accessible labels, validation, and a clear privacy note.</p>
           </article>
         </div>
       </section>
@@ -255,7 +247,7 @@
         <h2>12. Content Strategy</h2>
         <ul>
           <li>Use concise, helpful text that is easy to scan on mobile and desktop screens.</li>
-          <li>Highlight inspirational photography of temple locations and landscapes.</li>
+          <li>Provide a searchable worldwide temple directory using official names, locations, statuses, and profile photos; label representative photos for dedicated temples and leave announced temples without a photo.</li>
           <li>Present practical planning information such as timing, travel preparation, and family-friendly considerations.</li>
           <li>Keep the site accessible by using descriptive headings, alt text, and strong contrast.</li>
         </ul>
@@ -273,12 +265,20 @@
       </section>
 
       <section>
-        <h2>14. Future Implementation Notes</h2>
+        <h2>14. Implementation Notes</h2>
         <p>
-          The final project will be built as a responsive multi-page website with consistent navigation,
-          polished CSS, and small JavaScript interactions such as form validation, content toggles, and
-          localStorage-based saved preferences. A references page will also be linked in the footer to
-          properly cite any external imagery or content used in the project.
+          The project includes a responsive homepage, an Explore page with all entries listed in the
+          official worldwide temple directory as of October 9, 2026, a Plan a Visit page with a
+          browser-saved planning form, and a separate references page linked from each footer.
+          Search and status filters make the global directory easier to browse. The directory has
+          385 entries. Dedicated temples without their own profile photo use a clearly labeled
+          representative photo of the Accra Ghana Temple, while announced temples are displayed
+          without a photo. Other profiles without an image identify the photo as unavailable.
+          Directory photos are lazy-loaded as visitors browse 24 cards at a time. Destination cards and visit plans use
+          localStorage. Official temple profile links provide
+          current schedules and visitor information; saved visit reminders do not make bookings or
+          transmit personal data. The homepage's temple photographs are optimized and stored locally;
+          external directory imagery and references are credited on the references page.
         </p>
       </section>
     </main>

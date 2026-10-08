@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Odongkara">
+    <meta name="description" content="Search the worldwide temple directory by name, location, or status, and visit official temple profiles with Temple Trail Guide.">
+    <meta name="theme-color" content="#173c35">
+    <title>Explore Temples | Temple Trail Guide</title>
+    <link rel="stylesheet" href="styles/site.css">
+    <script src="data/temples.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/explore.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="index.html" aria-label="Temple Trail Guide home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 48 48" focusable="false"><path d="M8 38h32M13 38V21h22v17M18 21V15l6-5 6 5v6M20 27v5m8-5v5M24 4v6" /><path d="M5 43c7-5 13-5 19 0s12 5 19 0" /></svg>
+          </span>
+          <span class="brand-name">Temple Trail <span>Guide</span></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+          <span class="menu-toggle-label">Menu</span>
+          <span class="menu-icon" aria-hidden="true"><span></span><span></span></span>
+        </button>
+        <nav class="primary-navigation" id="primary-navigation" aria-label="Main navigation">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link is-current" href="explore.html" aria-current="page">Explore</a>
+          <a class="nav-link" href="visit.html">Plan your visit</a>
+          <a class="nav-link nav-cta" href="index.html#saved">Saved places <span class="saved-count">0</span></a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="subpage-hero explore-hero" aria-labelledby="explore-title">
+        <div class="page-width subpage-hero-content">
+          <p class="eyebrow eyebrow-dark"><span></span> Discover with intention</p>
+          <h1 id="explore-title">A world of places.<br><em>One thoughtful journey.</em></h1>
+          <p>Explore temples around the world by name, location, or building status. Every listing links to the official temple profile.</p>
+          <a class="button button-primary" href="#temple-list">Explore the directory <span aria-hidden="true">↓</span></a>
+        </div>
+      </section>
+
+      <section class="explore-intro page-width" id="temple-list" aria-labelledby="temple-list-title">
+        <div>
+          <p class="eyebrow eyebrow-dark"><span></span> Official temple directory</p>
+          <h2 id="temple-list-title">Find a temple anywhere.</h2>
+        </div>
+        <p><strong id="temple-total">Loading temples…</strong> Listed worldwide. Search the name or location, or filter by status.</p>
+      </section>
+
+      <section class="directory-controls page-width" aria-label="Search and filter temple directory">
+        <div class="directory-search">
+          <label for="temple-search">Search by temple or location</label>
+          <input id="temple-search" type="search" autocomplete="off" placeholder="Try a city, country, or temple name">
+        </div>
+        <div class="directory-filter">
+          <label for="temple-status">Building status</label>
+          <select id="temple-status">
+            <option value="all">All statuses</option>
+            <option value="Dedicated">Dedicated</option>
+            <option value="Opening Soon">Opening soon</option>
+            <option value="Renovation">Renovation</option>
+            <option value="Construction">Under construction</option>
+            <option value="Announced">Announced</option>
+          </select>
+        </div>
+      </section>
+
+      <p class="directory-results page-width" id="directory-results" role="status" aria-live="polite"></p>
+      <section class="explore-grid page-width" id="temple-grid" aria-label="Temple search results"></section>
+      <div class="directory-more page-width">
+        <button class="button button-primary" id="load-more-temples" type="button">Show more temples <span aria-hidden="true">↓</span></button>
+      </div>
+
+      <section class="official-note page-width">
+        <span class="note-icon" aria-hidden="true">✦</span>
+        <p>Temple statuses and schedules can change. Confirm the latest details with the <a href="https://www.churchofjesuschrist.org/temples/list?lang=eng" target="_blank" rel="noreferrer">official temple directory</a> before making travel plans.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="page-width footer-main">
+        <a class="brand footer-brand" href="index.html"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48" focusable="false"><path d="M8 38h32M13 38V21h22v17M18 21V15l6-5 6 5v6M20 27v5m8-5v5M24 4v6" /><path d="M5 43c7-5 13-5 19 0s12 5 19 0" /></svg></span><span class="brand-name">Temple Trail <span>Guide</span></span></a>
+        <p>A thoughtful start for a meaningful journey.</p>
+        <a class="footer-reference" href="references.html">References &amp; image credits <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="page-width footer-bottom"><span>© <span id="current-year"></span> Temple Trail Guide</span><a href="#main-content">Back to top ↑</a></div>
+    </footer>
+  </body>
+</html>

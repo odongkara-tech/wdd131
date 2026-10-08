@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Odongkara">
+    <meta name="description" content="Build a simple personal temple visit plan and save it on your device with Temple Trail Guide.">
+    <meta name="theme-color" content="#173c35">
+    <title>Plan a Visit | Temple Trail Guide</title>
+    <link rel="stylesheet" href="styles/site.css">
+    <script src="data/temples.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/visit.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="index.html" aria-label="Temple Trail Guide home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 48 48" focusable="false"><path d="M8 38h32M13 38V21h22v17M18 21V15l6-5 6 5v6M20 27v5m8-5v5M24 4v6" /><path d="M5 43c7-5 13-5 19 0s12 5 19 0" /></svg>
+          </span>
+          <span class="brand-name">Temple Trail <span>Guide</span></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+          <span class="menu-toggle-label">Menu</span>
+          <span class="menu-icon" aria-hidden="true"><span></span><span></span></span>
+        </button>
+        <nav class="primary-navigation" id="primary-navigation" aria-label="Main navigation">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="explore.html">Explore</a>
+          <a class="nav-link is-current" href="visit.html" aria-current="page">Plan your visit</a>
+          <a class="nav-link nav-cta" href="index.html#saved">Saved places <span class="saved-count">0</span></a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="subpage-hero visit-hero" aria-labelledby="visit-title">
+        <div class="page-width subpage-hero-content">
+          <p class="eyebrow eyebrow-dark"><span></span> Prepare at your own pace</p>
+          <h1 id="visit-title">A little planning.<br><em>A more peaceful visit.</em></h1>
+          <p>Make a personal reminder for your temple trip. Your plan is saved only in this browser and stays on this device.</p>
+        </div>
+      </section>
+
+      <section class="planner-layout page-width" aria-label="Temple visit planner">
+        <div class="planner-intro">
+          <p class="eyebrow eyebrow-dark"><span></span> Your visit, your way</p>
+          <h2>Start with the details.</h2>
+          <p>Choose a destination and a date to create a simple personal reminder. This tool does not book appointments or send your information anywhere.</p>
+          <div class="planner-reminder">
+            <strong>Before you travel</strong>
+            <p>Schedules, access, and visitor requirements may change. Confirm them directly with your selected temple’s official profile.</p>
+          </div>
+          <a class="text-link" href="explore.html">Explore temple destinations <span aria-hidden="true">↗</span></a>
+        </div>
+
+        <div class="planner-panel">
+          <h2>Build your visit plan</h2>
+          <p class="form-intro">Fields marked <span aria-hidden="true">*</span> are required.</p>
+          <form id="visit-form">
+            <div class="form-field">
+              <label for="visitor-name">Your name <span aria-hidden="true">*</span></label>
+              <input id="visitor-name" name="visitorName" type="text" autocomplete="name" maxlength="60" required>
+            </div>
+            <div class="form-field">
+              <label for="temple-choice">Temple destination <span aria-hidden="true">*</span></label>
+              <select id="temple-choice" name="temple" required>
+                <option value="">Select a destination</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="visit-date">Planned date <span aria-hidden="true">*</span></label>
+                <input id="visit-date" name="visitDate" type="date" required>
+              </div>
+              <div class="form-field">
+                <label for="travelers">People travelling</label>
+                <input id="travelers" name="travelers" type="number" min="1" max="20" value="1">
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="visit-notes">Personal notes <span class="optional-label">(optional)</span></label>
+              <textarea id="visit-notes" name="visitNotes" rows="4" maxlength="400" placeholder="Travel reminders, questions to check, or anything you want to remember."></textarea>
+              <span class="field-note">Please do not include sensitive personal or religious information.</span>
+            </div>
+            <button class="button button-primary form-submit" type="submit">Save my visit plan <span aria-hidden="true">↗</span></button>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+
+      <section class="saved-plans-section">
+        <div class="page-width">
+          <div class="saved-heading">
+            <div>
+              <p class="eyebrow eyebrow-dark"><span></span> Stored on this device</p>
+              <h2>Your visit plans</h2>
+            </div>
+            <p class="saved-message" id="plans-message" aria-live="polite">Your saved plans will appear here.</p>
+          </div>
+          <div class="visit-plan-list" id="visit-plan-list"></div>
+        </div>
+      </section>
+
+      <section class="visit-checklist page-width" aria-labelledby="checklist-title">
+        <p class="eyebrow eyebrow-dark"><span></span> A calm checklist</p>
+        <h2 id="checklist-title">Before setting out</h2>
+        <ul>
+          <li>Check the temple’s official page for current schedules, closures, and appointment information.</li>
+          <li>Confirm the route, transportation, parking, and expected travel time.</li>
+          <li>Allow room in your schedule for rest, meals, and the needs of everyone travelling with you.</li>
+          <li>Use the temple’s official contact details for questions about accessibility or special circumstances.</li>
+        </ul>
+        <a href="https://www.churchofjesuschrist.org/temples?lang=eng" target="_blank" rel="noreferrer">Open the official temple directory ↗</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="page-width footer-main">
+        <a class="brand footer-brand" href="index.html"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48" focusable="false"><path d="M8 38h32M13 38V21h22v17M18 21V15l6-5 6 5v6M20 27v5m8-5v5M24 4v6" /><path d="M5 43c7-5 13-5 19 0s12 5 19 0" /></svg></span><span class="brand-name">Temple Trail <span>Guide</span></span></a>
+        <p>A thoughtful start for a meaningful journey.</p>
+        <a class="footer-reference" href="references.html">References &amp; image credits <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="page-width footer-bottom"><span>© <span id="current-year"></span> Temple Trail Guide</span><a href="#main-content">Back to top ↑</a></div>
+    </footer>
+  </body>
+</html>
