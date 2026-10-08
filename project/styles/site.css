@@ -9,8 +9,8 @@
   --ink: #202c28;
   --muted: #64706a;
   --line: #dfdfd5;
-  --serif: "Playfair Display", Georgia, "Times New Roman", serif;
-  --sans: "DM Sans", Arial, Helvetica, sans-serif;
+  --serif: Georgia, "Times New Roman", serif;
+  --sans: Arial, Helvetica, sans-serif;
 }
 
 * {
